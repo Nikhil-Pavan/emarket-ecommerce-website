@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarket - Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">Emarket</a>
+        <button type="button" id="nav-hamburger" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <nav class="nav-menu">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="cart.html" class="cart-icon-wrap" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count-badge" id="cart-count-badge">0</span>
+            </a>
+            <a href="login&SignUP.html" aria-label="Account"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <section class="checkout-page-section backcolor">
+        <div class="checkout-container">
+            <h1 class="checkout-page-title">Checkout</h1>
+            <div class="checkout-grid">
+                <div class="checkout-address-block">
+                    <h2>Delivery Address</h2>
+                    <div id="saved-addresses"></div>
+                    <div id="new-address-form" class="address-form">
+                        <h3>Add New Address</h3>
+                        <div class="form-group">
+                            <label for="addr-name">Name</label>
+                            <input type="text" id="addr-name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr-phone">Phone</label>
+                            <input type="tel" id="addr-phone" required placeholder="Phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr-street">House / Street</label>
+                            <input type="text" id="addr-street" required placeholder="Street address">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr-city">City</label>
+                            <input type="text" id="addr-city" required placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr-state">State</label>
+                            <input type="text" id="addr-state" required placeholder="State">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr-pincode">Pincode</label>
+                            <input type="text" id="addr-pincode" required placeholder="Pincode">
+                        </div>
+                        <button type="button" class="btn-save-address">Save Address</button>
+                    </div>
+                </div>
+                <div class="checkout-order-block">
+                    <h2>Order Summary</h2>
+                    <div id="checkout-order-items" class="checkout-order-items"></div>
+                    <div class="checkout-order-total">
+                        <strong>Total: $<span id="checkout-total">0.00</span></strong>
+                    </div>
+                    <button type="button" class="btn-place-order" id="btn-place-order">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="order-confirm-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p class="modal-message">Your order has been placed successfully!</p>
+            <button type="button" class="btn-modal-ok" id="btn-modal-ok">OK</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container1">
+            <div class="aciversit-logo1">
+                <span style="color: #ff7b00;">Emarket</span>
+                <span><i id="basket-icon1" class="headerLogo"></i></span>
+                <p class="footer-container1-text">Lorem ipsum Dolor Sit Amet<br><br> Consectetur Adipisicing Elit.<br><br>Aliquam, Saepe.</p>
+                <div class="icons2">
+                    <a href="https://www.facebook.com/"><i id="footer-icons" class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/login?lang=en"><i id="footer-icons" class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i id="footer-icons" class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/"><i id="footer-icons" class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container2">
+            <h3 id="contact-info">Contact Info</h3>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip"></i> &nbsp;+123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip"></i>&nbsp; +123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-envelope"></i>&nbsp; nikhilpavan@gmail.com</p>
+            <p id="phone-numbers"><i class="fa-solid fa-location-dot"></i>&nbsp; Bengaluru, India - 560037</p>
+        </div>
+        <div class="footer-container3">
+            <h3 id="contact-info">Quick Links</h3>
+            <a href="index.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Home</a><br><br>
+            <a href="features.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Features</a><br><br>
+            <a href="products.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Products</a><br><br>
+            <a href="categories.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Categories</a><br><br>
+            <a href="review.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Review</a><br><br>
+            <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Blogs</a>
+        </div>
+        <div class="footer-container4">
+            <h3 id="contact-info">Newsletter</h3>
+            <p>Subscribe For Latest Updates</p>
+            <input class="input" type="email" placeholder="your email"/><br><br>
+            <button class="read-more-btn">Subscribe</button><br><br>
+            <img src="./assets/payment.png" alt="Payment methods" />
+        </div>
+    </footer>
+    <hr><br>
+    <div class="copyright">Created By <span id="name"> Mr.Jammalamadugu Nikhil</span> | All Rights Reserved</div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>

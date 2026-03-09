@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarket - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">Emarket</a>
+        <button type="button" id="nav-hamburger" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <nav class="nav-menu">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#" id="search-icon" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="cart.html" class="cart-icon-wrap" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count-badge" id="cart-count-badge">0</span>
+            </a>
+            <a href="login&SignUP.html" aria-label="Account"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="search-dropdown" id="search-dropdown">
+            <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-dropdown-items" id="cart-dropdown-items"></div>
+            <div class="cart-dropdown-footer">
+                <strong>Subtotal: $<span id="cart-dropdown-total">0.00</span></strong>
+                <a href="cart.html" class="btn-view-cart">View Cart</a>
+                <a href="checkout.html" class="btn-checkout-dropdown">Checkout</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="cart-page-section backcolor">
+        <div class="cart-page-container">
+            <h1 class="cart-page-title">Shopping Cart</h1>
+            <div class="cart-table-wrap">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Item Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <div class="cart-summary-row">
+                    <span>Subtotal</span>
+                    <span>$<span id="cart-subtotal">0.00</span></span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Delivery fee</span>
+                    <span>$<span id="cart-delivery">5.99</span></span>
+                </div>
+                <div class="cart-summary-row cart-summary-total">
+                    <span>Final total</span>
+                    <span>$<span id="cart-total">0.00</span></span>
+                </div>
+                <a href="checkout.html" class="btn-proceed-checkout">Proceed To Checkout</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container1">
+            <div class="aciversit-logo1">
+                <span style="color: #ff7b00;">Emarket</span>
+                <span><i id="basket-icon1" class="headerLogo"></i></span>
+                <p class="footer-container1-text">Lorem ipsum Dolor Sit Amet<br><br> Consectetur Adipisicing Elit.<br><br>Aliquam, Saepe.</p>
+                <div class="icons2">
+                    <a href="https://www.facebook.com/"><i id="footer-icons" class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/login?lang=en"><i id="footer-icons" class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i id="footer-icons" class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/"><i id="footer-icons" class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container2">
+            <h3 id="contact-info">Contact Info</h3>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip"></i> &nbsp;+123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip"></i>&nbsp; +123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-envelope"></i>&nbsp; nikhilpavan@gmail.com</p>
+            <p id="phone-numbers"><i class="fa-solid fa-location-dot"></i>&nbsp; Bengaluru, India - 560037</p>
+        </div>
+        <div class="footer-container3">
+            <h3 id="contact-info">Quick Links</h3>
+            <a href="index.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Home</a><br><br>
+            <a href="features.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Features</a><br><br>
+            <a href="products.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Products</a><br><br>
+            <a href="categories.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Categories</a><br><br>
+            <a href="review.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Review</a><br><br>
+            <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Blogs</a>
+        </div>
+        <div class="footer-container4">
+            <h3 id="contact-info">Newsletter</h3>
+            <p>Subscribe For Latest Updates</p>
+            <input class="input" type="email" placeholder="your email"/><br><br>
+            <button class="read-more-btn">Subscribe</button><br><br>
+            <img src="./assets/payment.png" alt="Payment methods" />
+        </div>
+    </footer>
+    <hr><br>
+    <div class="copyright">Created By <span id="name"> Mr.Jammalamadugu Nikhil</span> | All Rights Reserved</div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

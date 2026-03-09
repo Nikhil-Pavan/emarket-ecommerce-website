@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarket - Fresh Organic Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+                    <!-- This is the main page in this project -->
+    <header class="site-header">
+        <a href="index.html" class="logo">Emarket</a>
+        <button type="button" id="nav-hamburger" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <nav class="nav-menu">
+            <ul class="navbar">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#" id="search-icon" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="cart.html" class="cart-icon-wrap" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count-badge" id="cart-count-badge">0</span>
+            </a>
+            <a href="login&SignUP.html" aria-label="Account"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="search-dropdown" id="search-dropdown">
+            <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-dropdown-items" id="cart-dropdown-items"></div>
+            <div class="cart-dropdown-footer">
+                <strong>Subtotal: $<span id="cart-dropdown-total">0.00</span></strong>
+                <a href="cart.html" class="btn-view-cart">View Cart</a>
+                <a href="checkout.html" class="btn-checkout-dropdown">Checkout</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Fresh And <span>Organic</span> Products For You</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
+            <a href="products.html" class="btn-primary btn-hero">Shop Now</a>
+        </div>
+    </section>
+
+                            <!--------Our Features------->
+
+
+                                 <!--our features-->
+
+<section class="features-page">
+    <h2>Our <span class="clip">Features</span></h2>
+    <div class="features-container">
+        
+            <div class="ours-features-container1">
+                <div class="inline-border">
+                <img src="./assets/feature-img-1.png" alt="Fresh and Organic">
+                <h3>Fresh And Organiic</h3>
+                <p>Lorem Ipsum Dolor Sit Amet Consectetur<br> Adipisicing Elit. Deserunt,Earum!</p><br>
+                <button class="readmore-btn">Read More</button>
+                </div>
+            </div>
+            <div class="ours-features-container2">
+                <div class="inline-border">
+                <img src="./assets/feature-img-2.png" alt="Free Delivery">
+                <h3>Free Delivery</h3>
+                <p>Lorem Ipsum Dolor Sit Amet Consectetur<br> Adipisicing Elit. Deserunt,Earum!</p><br>
+                <button class="readmore-btn">Read More</button>
+                </div>
+            </div>
+            <div class="ours-features-container3">
+                <div class="inline-border">
+                <img src="./assets/feature-img-3.png" alt="Easy Payments">
+                <h3>Easy Payments</h3>
+                <p>Lorem Ipsum Dolor Sit Amet Consectetur<br> Adipisicing Elit. Deserunt,Earum!</p><br>
+                <button class="readmore-btn">Read More</button>
+                </div>
+            </div>
+</section>
+
+                            <!------Our Products---->
+
+<!--Our Products-->
+<section class="our-products-page">
+    <h2 class="our-products">Our 
+        <span class="clip">Products</span>
+    </h2><br><br>
+    <section class="our-products-page1">
+        <div id="cabage" class="products-img-container1 product-card" data-product-id="cabbage" data-product-name="Fresh Cabbage" data-product-price="4.99" data-product-image="./assets/product-4.png">
+            <div id="border">
+            <img  class="cabage-img" src="./assets/product-4.png" alt="Fresh Cabbage" />
+            <h3 class="fresh-and-organic">Fresh Cabbage</h3>
+            <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+            <div class="star-icons">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <button class="products-btn add-to-cart-btn">Add To Cart</button>
+            </div>
+        </div>
+        <div id="orange" class="products-img-container2 product-card" data-product-id="orange" data-product-name="Fresh Orange" data-product-price="4.99" data-product-image="./assets/product-1.png">
+            <span class="product-badge">-20%</span>
+            <div id="border">
+            <img  class="cabage-img" src="./assets/product-1.png" alt="Fresh Orange" />
+            <h3 class="fresh-and-organic">Fresh Orange</h3>
+            <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+            <div class="star-icons">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <button class="products-btn add-to-cart-btn">Add To Cart</button>
+            </div>
+        </div>
+        <div id="onion" class="products-img-container3 product-card" data-product-id="onion" data-product-name="Fresh Onion" data-product-price="4.99" data-product-image="./assets/product-2.png">
+            <div id="border">
+            <img  class="cabage-img" src="./assets/product-2.png" alt="Fresh Onion" />
+            <h3 class="fresh-and-organic">Fresh Onion</h3>
+            <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+            <div class="star-icons">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+        </div>
+        <div id="lemon" class="products-img-container1 product-card" data-product-id="lemon" data-product-name="Green Lemon" data-product-price="4.99" data-product-image="./assets/product-8.png">
+            <div id="border">
+            <img  class="cabage-img" src="./assets/product-8.png" alt="Green Lemon" />
+            <h3 class="fresh-and-organic">Green Lemon</h3>
+            <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+            <div class="star-icons">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <button class="products-btn add-to-cart-btn">Add To Cart</button>
+            </div>
+        </div>
+        <div id="potato" class="products-img-container2 product-card" data-product-id="potato" data-product-name="Fresh Potato" data-product-price="4.99" data-product-image="./assets/product-5.png">
+            <div id="border">
+                <img  class="cabage-img" src="./assets/product-5.png" alt="Fresh Potato" />
+                <h3 class="fresh-and-organic">Fresh Potato</h3>
+                <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+                <div class="star-icons">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <button class="products-btn add-to-cart-btn">Add To Cart</button>
+            </div>
+        </div>
+        <div id="avocado" class="products-img-container3 product-card" data-product-id="avocado" data-product-name="Fresh Avocado" data-product-price="4.99" data-product-image="./assets/product-6.png">
+            <div id="border">
+            <img  class="cabage-img" src="./assets/product-6.png" alt="Fresh Avocado" />
+            <h3 class="fresh-and-organic">Fresh Avocado</h3>
+            <p class="product-price" style="color:rgb(146, 145, 145)">$4.99</p>
+            <div class="star-icons">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <button class="products-btn add-to-cart-btn">Add To Cart</button>
+            </div>
+        </div>
+        
+    </section>
+    </section>
+
+                             <!------Products Categories------>
+
+<!--Product Categories-->
+<h2 class="our-products">Products 
+    <span class="clip">Categories</span>
+</h2><br><br>
+<section class="product-categories">
+    <div class="product-categories-container1 product-card" data-product-id="cat-veg-1" data-product-name="Vegitables" data-product-price="5.99" data-product-image="./assets/cat-1.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-1.png" alt="Vegitables" />
+        <h3 class="fresh-fruits">Vegitables</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container2 product-card" data-product-id="cat-fruits-1" data-product-name="Fresh Fruits" data-product-price="5.99" data-product-image="./assets/cat-2.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-2.png" alt="Fresh Fruits" />
+        <h3 class="fresh-fruits">Fresh Fruits</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container3 product-card" data-product-id="cat-dairy-1" data-product-name="Dairy Products" data-product-price="6.99" data-product-image="./assets/cat-3.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-3.png" alt="Dairy Products" />
+        <h3 class="fresh-fruits">Dairy Products</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container4 product-card" data-product-id="cat-meat-1" data-product-name="Fresh Meat" data-product-price="8.99" data-product-image="./assets/cat-4.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-4.png" alt="Fresh Meat" />
+        <h3 class="fresh-fruits">Fresh Meat</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container1 product-card" data-product-id="cat-veg-2" data-product-name="Vegitables" data-product-price="5.99" data-product-image="./assets/cat-1.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-1.png" alt="Vegitables" />
+        <h3 class="fresh-fruits">Vegitables</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container4 product-card" data-product-id="cat-meat-2" data-product-name="Fresh Meat" data-product-price="8.99" data-product-image="./assets/cat-4.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-4.png" alt="Fresh Meat" />
+        <h3 class="fresh-fruits">Fresh Meat</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container3 product-card" data-product-id="cat-dairy-2" data-product-name="Dairy Products" data-product-price="6.99" data-product-image="./assets/cat-3.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-3.png" alt="Dairy Products" />
+        <h3 class="fresh-fruits">Dairy Products</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container2 product-card" data-product-id="cat-fruits-2" data-product-name="Fresh Fruits" data-product-price="5.99" data-product-image="./assets/cat-2.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-2.png" alt="Fresh Fruits" />
+        <h3 class="fresh-fruits">Fresh Fruits</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container1 product-card" data-product-id="cat-veg-3" data-product-name="Vegitables" data-product-price="5.99" data-product-image="./assets/cat-1.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-1.png" alt="Vegitables" />
+        <h3 class="fresh-fruits">Vegitables</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container4 product-card" data-product-id="cat-meat-3" data-product-name="Fresh Meat" data-product-price="8.99" data-product-image="./assets/cat-4.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-4.png" alt="Fresh Meat" />
+        <h3 class="fresh-fruits">Fresh Meat</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container3 product-card" data-product-id="cat-dairy-3" data-product-name="Dairy Products" data-product-price="6.99" data-product-image="./assets/cat-3.png">
+        <div id="inline-border1">
+        <img class="categories-product" src="./assets/cat-3.png" alt="Dairy Products" />
+        <h3 class="fresh-fruits">Dairy Products</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="product-categories-container2 product-card" data-product-id="cat-fruits-3" data-product-name="Fresh Fruits" data-product-price="5.99" data-product-image="./assets/cat-2.png">
+        <div id="inline-border1">
+        <img  class="categories-product" src="./assets/cat-2.png" alt="Fresh Fruits" />
+        <h3 class="fresh-fruits">Fresh Fruits</h3>
+        <p style="color:rgb(146, 145, 145)">Upto 45% Off</p>
+        <button class="products-btn add-to-cart-btn">Add To Cart</button>
+        </div>
+    </div>
+        
+   
+</section>
+<br>
+
+
+                            <!------Customer's Review------->
+
+<!--Customer's Review-->
+<div class="Customer-Review"></div>
+<h2 class="our-products">Customer's 
+    <span class="clip">Review</span>
+</h2>
+<section class="customer">
+<div class="customer-review-container1">
+    <div class="customer-border">
+    <img class="customer-img" src="./assets/pic-4.png" alt="John Deo" />
+    <p id="customer-content" style="color:rgb(78, 77, 77)">Lorem ipsum Dolor Sit Amet Consectetur<br>  Adipisicing Elit.Unde Sunt Fugiat
+        Dolore<br> Ipsum id est Maxime Ad Tempore Quasi <br>Tenetur.
+    </p>
+    <h3>Jone Deo</h3><br>
+    <div class="star-icons1">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>
+    </div>
+</div>
+<div class="customer-review-container2">
+    <div class="customer-border">
+    <img class="customer-img" src="./assets/pic-1.png" alt="John Deo" />
+    <p id="customer-content" style="color:rgb(78, 77, 77)">Lorem ipsum Dolor Sit Amet Consectetur<br> Adipisicing Elit.Unde Sunt Fugiat
+        Dolore<br> Ipsum id est Maxime Ad Tempore Quasi<br> Tenetur.
+    </p>
+    <h3>Jone Deo</h3><br>
+    <div class="star-icons1">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+    </div>
+</div>
+<div class="customer-review-container3">
+    <div class="customer-border">
+        <img class="customer-img" src="./assets/pic-2.png" alt="John Deo" />
+        <p id="customer-content" style="color:rgb(78, 77, 77)">Lorem ipsum Dolor Sit Amet Consectetur<br> Adipisicing Elit.Unde Sunt Fugiat
+            Dolore<br> Ipsum id est Maxime Ad Tempore Quasi<br> Tenetur.
+        </p>
+        <h3>Jone Deo</h3><br>
+        <div class="star-icons1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+    </div>
+</div>
+</section>
+
+                            <!-------Our Blogs--------->
+
+<!--Our Blogs--> 
+<div id="bgcolor1">
+    <h2 class="blogs1">Our 
+        <span class="clip">Blogs</span>
+    </h2>
+    <br><br>
+    <section class="blogs">
+    <div class="b-container1">
+        <img  src="./assets/blog-1.jpg" /><br><br>
+        <span class="by-user"><i id="user" class="fa-solid fa-user"></i>&nbsp; By User</span><span id="calender"> <i class="fa-solid fa-calendar-days"></i> &nbsp; 1st May, 2021</span><br><br>
+        <hr class="hrline">
+        <div class="vegitables-fruits">
+            <h3 id="fresh-and-organic" >Fresh And Organic<br>Vegitables And Fruits</h3>
+            <p id="paragraph">Lorem ipsum Dolor Sit Amet Consectetur Adipisicing Elit.Veniam, Expedita</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </div>
+    <div class="b-container2">
+        <img  src="./assets/blog-2.jpg" /><br><br>
+        <span class="by-user"><i id="user" class="fa-solid fa-user"></i>&nbsp; By User</span><span id="calender"> <i class="fa-solid fa-calendar-days"></i> &nbsp; 1st May, 2021</span><br><br>
+        <hr class="hrline">
+        <div class="vegitables-fruits">
+            <h3 id="fresh-and-organic">Fresh And Organic<br>Vegitables And Fruits</h3>
+            <p id="paragraph">Lorem ipsum Dolor Sit Amet Consectetur Adipisicing Elit.Veniam, Expedita</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </div>
+    <div class="b-container3">
+        <img  src="./assets/blog-3.jpg" /><br><br>
+        <span class="by-user"><i id="user" class="fa-solid fa-user"></i>&nbsp; By User</span><span id="calender"> <i class="fa-solid fa-calendar-days"></i> &nbsp; 1st May, 2021</span><br><br>
+        <hr class="hrline">
+        <div class="vegitables-fruits">
+            <h3 id="fresh-and-organic">Fresh And Organic<br>Vegitables And Fruits</h3>
+            <p id="paragraph" >Lorem ipsum Dolor Sit Amet Consectetur Adipisicing Elit.Veniam, Expedita</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </div>
+    </section><br><br>
+    </section>
+    </div>
+
+                                <!-----Footer----->
+
+    <footer class="footer">
+        <div class="footer-container1">
+            <div class="aciversit-logo1">
+               <span style="color: #ff7b00;">Emarket</span>
+                <span><i id="basket-icon1" class="headerLogo"></i></span>
+                <p class="footer-container1-text">Lorem ipsum Dolor Sit Amet<br><br> Consectetur Adipisicing Elit.<br><br>Aliquam, Saepe.</p>
+                <div class="icons2">
+                    <a href="https://www.facebook.com/"><i  id="footer-icons" class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/login?lang=en"><i  id="footer-icons" class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i  id="footer-icons" class="fa-brands fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/"><i  id="footer-icons" class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div> 
+        </div>
+        <div class="footer-container2">
+            <h3 id="contact-info">Contact Info</h3>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip"></i> &nbsp;+123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-phone-flip" ></i>&nbsp; +123-456-7890</p>
+            <p id="phone-numbers"> <i class="fa-solid fa-envelope"></i>&nbsp; nikhilpavan@gmail.com</p>
+            <p id="phone-numbers"><i class="fa-solid fa-location-dot"></i>&nbsp; Bengaluru, India - 560037</p>
+        </div>
+        <div class="footer-container3">
+            <h3 id="contact-info">Quick Links</h3>
+            <a href="index.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Home</a><br><br>
+            <a href="features.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Features</a><br><br>
+            <a href="products.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Products</a><br><br>
+            <a href="categories.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Categories</a><br><br>
+            <a href="review.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Review</a><br><br>
+            <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> &nbsp; Blogs</a>
+        </div>
+        <div class="footer-container4">
+            <h3 id="contact-info">Newsletter</h3>
+            <p>Subscribe For Latest Updates</p>
+            <input class="input" type="email" placeholder="your email"/><br><br>
+            <button class="read-more-btn">Subscribe</button><br><br>
+            <img src="./assets/payment.png" />
+        </div>
+     </footer><br><br>
+     <hr><br>
+     <div class="copyright">Created By  <span id="name"> Mr.Jammalamadugu Nikhil</span> | All Rights Reserved</div>
+</section>
+<script src="./js/app.js"></script>
+</body>
+</html>

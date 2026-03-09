@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Space theme ========== */
+.space-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, #1b2838 0%, #0d1117 100%);
+  z-index: 0;
+}
+.stars, .stars2, .stars3 {
+  position: absolute;
+  inset: 0;
+}
+.stars {
+  background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 50px 160px, #fff, transparent),
+    radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 130px 80px, #fff, transparent);
+  background-size: 200px 200px;
+  animation: twinkle 5s ease-in-out infinite;
+  opacity: 0.9;
+}
+.stars2 {
+  background-image: radial-gradient(1px 1px at 100px 50px, #fff, transparent),
+    radial-gradient(1px 1px at 200px 150px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 300px 100px, #fff, transparent);
+  background-size: 300px 300px;
+  animation: twinkle 7s ease-in-out infinite 1s;
+  opacity: 0.7;
+}
+.stars3 {
+  background-image: radial-gradient(1px 1px at 50px 200px, #fff, transparent),
+    radial-gradient(1px 1px at 150px 100px, rgba(255,255,255,0.7), transparent);
+  background-size: 250px 250px;
+  animation: twinkle 6s ease-in-out infinite 2s;
+  opacity: 0.5;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.4; }
+}
+.astronaut {
+  position: fixed;
+  font-size: 48px;
+  color: rgba(255,255,255,0.25);
+  z-index: 1;
+  animation: float 15s ease-in-out infinite;
+}
+.astronaut-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.astronaut-2 { top: 60%; right: 15%; animation-delay: -5s; animation-duration: 18s; }
+.astronaut-3 { bottom: 20%; left: 20%; font-size: 32px; animation-delay: -8s; animation-duration: 12s; }
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, -30px) rotate(5deg); }
+  50% { transform: translate(-15px, 20px) rotate(-5deg); }
+  75% { transform: translate(25px, 15px) rotate(3deg); }
+}
+
+/* ========== Wrapper & forms ========== */
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  z-index: 10;
+}
+
+.form-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Default: Login (sign-in) on top */
+.form-wrapper.sign-in {
+  z-index: 2;
+  opacity: 1;
+}
+.form-wrapper.sign-up {
+  transform: rotate(-7deg);
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.wrapper.animate-signUp .form-wrapper.sign-in {
+  transform: rotate(7deg);
+  animation: animateRotate 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+  z-index: 1;
+}
+.wrapper.animate-signIn .form-wrapper.sign-in {
+  animation: animateSignIn 1.5s ease-in-out forwards;
+  z-index: 2;
+}
+
+@keyframes animateSignIn {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-500px); }
+  100% { transform: translateX(0) rotate(7deg); }
+}
+
+.wrapper.animate-signIn .form-wrapper.sign-up {
+  animation: animateRotate 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+  z-index: 2;
+}
+@keyframes animateRotate {
+  0% { transform: rotate(7deg); }
+  100% { transform: rotate(0); z-index: 2; }
+}
+
+.wrapper.animate-signUp .form-wrapper.sign-up {
+  animation: animateSignUp 1.5s ease-in-out forwards;
+  z-index: 2;
+}
+@keyframes animateSignUp {
+  0% { transform: translateX(0); z-index: 2; }
+  50% { transform: translateX(500px); }
+  100% { transform: translateX(0) rotate(-7deg); }
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  position: relative;
+  width: 320px;
+  margin: 24px 0;
+}
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.3s;
+  background: transparent;
+}
+.input-group input {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  color: #333;
+  padding: 0 14px;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.input-group input:focus,
+.input-group input:valid {
+  background: #fff;
+  border-color: #ff7b00;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: 0;
+  font-size: 12px;
+  background: #fff;
+  color: #ff7b00;
+  padding: 0 6px;
+}
+
+.forgot-pass {
+  margin: -8px 0 16px;
+  text-align: right;
+}
+.forgot-pass a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+.forgot-pass a:hover {
+  color: #ff7b00;
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(135deg, #ff7b00, #e66d00);
+  box-shadow: 0 4px 15px rgba(255, 123, 0, 0.4);
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.5);
+}
+
+.sign-link {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 24px;
+}
+.sign-link p {
+  color: #555;
+}
+.sign-link p a {
+  color: #ff7b00;
+  text-decoration: none;
+  font-weight: 600;
+}
+.sign-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    min-height: 480px;
+  }
+  .form-wrapper {
+    padding: 24px;
+  }
+  .input-group {
+    width: 100%;
+    max-width: 280px;
+  }
+}

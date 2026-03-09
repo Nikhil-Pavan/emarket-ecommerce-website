@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarket - Login & Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/login&SignUp.css">
+</head>
+<body>
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="astronaut astronaut-1"><i class="fa-solid fa-user-astronaut"></i></div>
+        <div class="astronaut astronaut-2"><i class="fa-solid fa-user-astronaut"></i></div>
+        <div class="astronaut astronaut-3"><i class="fa-solid fa-moon"></i></div>
+    </div>
+    <div class="wrapper" id="auth-wrapper">
+        <div class="form-wrapper sign-in">
+            <form id="login-form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" id="login-username" required placeholder=" ">
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-password" required placeholder=" ">
+                    <label>Password</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="sign-link">
+                    <p>Don't have an account? <a href="#" class="signUp-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-wrapper sign-up">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" id="signup-username" required placeholder=" ">
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signup-email" required placeholder=" ">
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signup-password" required placeholder=" ">
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="sign-link">
+                    <p>Already have an account? <a href="#" class="signIn-link">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/login&SignUp.js"></script>
+</body>
+</html>
